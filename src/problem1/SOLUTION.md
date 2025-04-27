@@ -1,0 +1,1 @@
+Provide your CLI command here: awk '/"symbol": "TSLA"/ && /"side": "sell"/' ./transaction-log.txt | jq -r '.order_id' | xargs -I {} curl -s https://example.com/api/{} >> ./output.txt
